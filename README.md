@@ -24,7 +24,7 @@ Instalasi:
  
 9)	Di cmd atau terminal anda ketik `php artisan migrate` dan tekan enter. Tunggu sampai proses selesai.
  
-- Apabila terjadi kegagalan, buka file dengan nama `php.ini` yang ada di folder php (apabila melalui XAMPP, ada di dalam folder XAMPP atau di dalam folder laragon/bin/php jika melalui laragon) dan temukan kalimat extension untuk database anda seperti ini `;extension=pdo_mysql` dan hapus titik koma diawalan kalimat menjadi `extension=pdo_mysql` (contoh database mysql).
+- Apabila terjadi kegagalan, buka file dengan nama `php.ini` yang ada di folder php (apabila melalui XAMPP, ada di dalam folder XAMPP atau di dalam folder laragon/bin/php jika melalui laragon) dan temukan kalimat extension untuk database anda seperti ini (contoh database mysql) `;extension=pdo_mysql` dan hapus titik koma diawalan kalimat menjadi `extension=pdo_mysql`.
 
 10)	Apabila nama database yang ada di file `.env` tidak ada maka akan mucul tampilan pemberitahuan `database ‘[nama database]’ does not exist on the ‘[database]’ connection`. Ketik `yes` dan tekan enter. Tunggu sampai proses selesai.
  
