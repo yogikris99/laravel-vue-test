@@ -32,28 +32,28 @@
 import axios from 'axios';
 
 export default {
-data() {
-  return {
-    products: []
-  }
-},
-async created() {
-  try {
-    const response = await axios.get('/api/products');
-    this.products = response.data;
-  } catch (error) {
-    console.error(error);
-  }
-},
-methods: {
-  async deleteProduct(id) {
+  data() {
+    return {
+      products: []
+    }
+  },
+  async created() {
     try {
-      await axios.delete(`/api/products/${id}`);
-      this.products = this.products.filter(product => product.id !== id);
+      const response = await axios.get('/api/products');
+      this.products = response.data;
     } catch (error) {
       console.error(error);
     }
+  },
+  methods: {
+    async deleteProduct(id) {
+      try {
+        await axios.delete(`/api/products/${id}`);
+        this.products = this.products.filter(product => product.id !== id);
+      } catch (error) {
+        console.error(error);
+      }
+    }
   }
-}
 }
 </script>
